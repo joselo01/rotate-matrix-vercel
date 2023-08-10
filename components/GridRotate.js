@@ -1,7 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Form } from "./Form";
+
+const InitArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
 export const GridRotate = () => {
-    const [initMatriz, setInitMatriz] = useState([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+    const [initMatriz, setInitMatriz] = useState(InitArray);
     const arrOfStrs = Array.from(String(initMatriz).replace(/,/g, ""));
 
     const rotarMatriz90Antihorario = () => {
